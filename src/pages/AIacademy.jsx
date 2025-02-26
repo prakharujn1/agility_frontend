@@ -1,31 +1,32 @@
 import React, { useEffect, useState } from "react";
 import Card from "../components/UI/Card";
 import { Link } from "react-router-dom";
+import {events , webinars , courses} from "../constants"
 
 const AIacademy = () => {
-    const [events, setEvents] = useState([]);
-    const [webinars, setWebinars] = useState([]);
-    const [courses, setCourses] = useState([]);
+    // const [events, setEvents] = useState([]);
+    // const [webinars, setWebinars] = useState([]);
+    // const [courses, setCourses] = useState([]);
 
-    useEffect(() => {
-        // Fetch Events
-        fetch("http://localhost:5000/events")
-            .then((res) => res.json())
-            .then((data) => setEvents(data))
-            .catch((err) => console.error("Error fetching events:", err));
+    // useEffect(() => {
+    //     // Fetch Events
+    //     fetch("http://localhost:5000/events")
+    //         .then((res) => res.json())
+    //         .then((data) => setEvents(data))
+    //         .catch((err) => console.error("Error fetching events:", err));
 
-        // Fetch Webinars
-        fetch("http://localhost:5000/webinars")
-            .then((res) => res.json())
-            .then((data) => setWebinars(data))
-            .catch((err) => console.error("Error fetching webinars:", err));
+    //     // Fetch Webinars
+    //     fetch("http://localhost:5000/webinars")
+    //         .then((res) => res.json())
+    //         .then((data) => setWebinars(data))
+    //         .catch((err) => console.error("Error fetching webinars:", err));
 
-        // Fetch Courses
-        fetch("http://localhost:5000/courses")
-            .then((res) => res.json())
-            .then((data) => setCourses(data))
-            .catch((err) => console.error("Error fetching courses:", err));
-    }, []);
+    //     // Fetch Courses
+    //     fetch("http://localhost:5000/courses")
+    //         .then((res) => res.json())
+    //         .then((data) => setCourses(data))
+    //         .catch((err) => console.error("Error fetching courses:", err));
+    // }, []);
 
     return (
         <div className="max-w-7xl mx-auto px-6">
